@@ -1,0 +1,181 @@
+/* ---------- Base ---------- */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11pt;
+    border: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(17, 17, 27, 0.4); /* totalement transparent */
+    color: #cdd6f4;
+}
+
+/* Alignement général des modules */
+#workspaces,
+#tray,
+#custom-music,
+#network,
+#bluetooth,
+#wireplumber,
+#backlight,
+#battery,
+#power-profiles-daemon,
+#clock,
+#custom-power,
+#sway-scratchpad,
+#sway-window {
+    padding: 0 6px;
+    margin: 0 2px;
+}
+
+/* ---------- Workspaces ---------- */
+
+#workspaces {
+    margin-left: 4px;
+}
+
+#workspaces button {
+    background: #181825;
+    color: #bac2de;
+    padding: 0 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+    border-radius: 0;
+}
+
+#workspaces button.focused {
+    background: #89b4fa;
+    color: #1e1e2e;
+    font-weight: 600;
+}
+
+#workspaces button.urgent {
+    background: #f38ba8;
+    color: #11111b;
+}
+
+#workspaces button:hover {
+    background: #313244;
+}
+
+/* ---------- Scratchpad & fenêtre ---------- */
+
+#sway-scratchpad {
+    background: #181825;
+    color: #f9e2af;
+}
+
+#window {
+    padding: 0 10px;
+    margin: 0 4px;
+    background: #181825;
+    color: #cdd6f4;
+}
+
+#window.empty {
+    background: transparent;
+    color: #45475a;
+}
+
+/* ---------- Centre : tray + musique ---------- */
+
+#tray {
+    padding: 0 8px;
+}
+
+#custom-music {
+    background: #181825;
+    padding: 0 10px;
+    color: #cba7f7;
+}
+
+/* ---------- Modules de droite ---------- */
+
+#network,
+#bluetooth,
+#wireplumber,
+#backlight,
+#battery,
+#power-profiles-daemon,
+#clock,
+#tray,
+#custom-power {
+    background: #181825;
+    padding: 0 10px;
+}
+
+/* Icônes réseau / BT / audio */
+#network {
+    color: #89dceb;
+}
+
+#bluetooth {
+    color: #74c7ec;
+}
+
+#wireplumber {
+    color: #a6e3a1;
+}
+
+/* Rétroéclairage / batterie / profils */
+#backlight {
+    color: #fab387;
+}
+
+#battery {
+    color: #f9e2af;
+}
+
+#power-profiles-daemon {
+    color: #f5c2e7;
+}
+
+/* Horloge */
+#clock {
+    color: #cdd6f4;
+}
+
+/* Bouton power */
+#custom-power {
+    color: #f38ba8;
+    padding-right: 12px;
+    padding-left: 8px;
+}
+
+/* Hover sur les modules de droite */
+#network:hover,
+#bluetooth:hover,
+#wireplumber:hover,
+#backlight:hover,
+#battery:hover,
+#power-profiles-daemon:hover,
+#clock:hover,
+#custom-power:hover,
+#custom-music:hover {
+    background: #313244;
+}
+
+/* ---------- États spéciaux ---------- */
+
+/* Batterie warning / critical */
+#battery.warning {
+    color: #f9e2af;
+    background: #45320a;
+}
+
+#battery.critical {
+    color: #f38ba8;
+    background: #3f151f;
+}
+
+/* Réseau déconnecté (format-disconnected non vide) */
+#network.disconnected {
+    color: #45475a;
+}
+
+/* Audio mute */
+#wireplumber.muted {
+    color: #45475a;
+}
+

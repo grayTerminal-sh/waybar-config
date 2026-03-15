@@ -1,0 +1,113 @@
+{
+    "name": "dockbar",
+    "id": "dockbar",
+    "layer": "bottom",
+    "position": "bottom",
+    "mod": "dock",
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "height": 40,
+    "margin-top": 0,
+    "margin-bottom": 10,
+    "margin-left": 500,
+    "margin-right": 500,
+    "start_hidden": true,
+    "on-sigusr1": "toggle",
+    "on-sigusr2": "toggle",
+
+    "modules-left": [
+        "custom/space",
+        "custom/launcher",
+        "custom/separator"
+    ],
+    "modules-center": [
+        "custom/deezer",
+        "custom/firefox",
+        "custom/perplexity",
+        "custom/files",
+        "custom/kitty"
+    ],
+    "modules-right": [
+        "power-profiles-daemon",
+        "battery",
+        "custom/space"
+    ],
+
+    "custom/space": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "custom/deezer": {
+        "format": "",
+        "on-click": "deezer-desktop",
+        "tooltip": false
+    },
+
+    "custom/perplexity": {
+        "format": "",
+        "on-click": "perplexity",
+        "tooltip": false
+    },
+
+    "custom/firefox": {
+        "format": "",
+        "on-click": "firefox",
+        "tooltip": false
+    },
+
+    "custom/files": {
+        "format": "",
+        "on-click": "thunar",
+        "tooltip": false
+    },
+
+    "custom/kitty": {
+        "format": "",
+        "on-click": "kitty",
+        "tooltip": false
+    },
+    
+    "wlr/taskbar": {
+        "sort-by-app-id": true
+    },
+
+    "custom/launcher": {
+        "format": "",
+        "on-click": "wofi --width=400 --height=500 --xoffset=500 --yoffset=430 --show drun",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}"
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon} {profile}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    }
+}
+

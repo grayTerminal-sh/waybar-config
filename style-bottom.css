@@ -1,0 +1,106 @@
+/* ------ Global ------ */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+window#waybar {
+    background: rgba(200, 200, 200, 0.1);
+    border-radius: 16px;
+    color: #c0caf5;
+}
+
+/* ------ Modules Free ------ */
+
+#custom-space {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/* ------ Modules Left ------ */
+#custom-separator {
+    font-size: 18px;
+}
+
+#custom-launcher {
+    font-size: 18px;
+    color: #74c7ec;
+    padding-left: 20px;
+    padding-right: 26px;
+}
+
+#custom-launcher:hover {
+    color: #74c7ec;
+    background: rgba(200, 200, 200, 0.1);
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 26px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* ------ Modules Center ------ */
+
+#custom-deezer,
+#custom-firefox,
+#custom-files,
+#custom-perplexity,
+#custom-kitty {
+    background: transparent;
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    transition: all 0.15s ease;
+    font-size: 18px;
+}
+
+#custom-deezer:hover,
+#custom-firefox:hover,
+#custom-files:hover,
+#custom-kitty:hover,
+#custom-perplexity:hover {
+    font-size: 42px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+/* ------ Modules Right ------ */
+
+#battery,
+#power-profiles-daemon {
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+#battery {
+    color: #f9e2af;
+}
+
+#power-profiles-daemon {
+    color: #f5c2e7;
+}
+
+#battery:hover,
+#power-profiles-daemon:hover {
+    background: rgba(93, 93, 93, 0.8);
+    border-radius: 5px;
+    border-bottom: 2px solid #bb9af7;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* ---------- États spéciaux ---------- */
+
+/* Batterie warning / critical */
+#battery.warning {
+    color: #f9e2af;
+    background: #45320a;
+}
+
+#battery.critical {
+    color: #f38ba8;
+    background: #3f151f;
+}

@@ -1,0 +1,118 @@
+{
+    "name": "topbar",
+    "layer": "top",
+    "position": "top",
+    "margin-top": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 3,
+    "modules-left": [
+        "clock",
+        "custom/hyprpicker",
+        "custom/ScrollMPRIS"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "wireplumber",
+        "backlight",
+        "tray",
+        "custom/power"
+    ],
+   
+    "custom/hyprpicker": {
+        "format": "󰴱",
+        "on-click": "hyprpicker -n --radius=60"
+    },
+
+    "hyprland/workspaces": {
+        "format": "",
+        "persistent-workspaces": {
+            "*": 10
+        }
+    },
+
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰊗  {ipaddr}/{cidr}",
+        "format-disconnected": "", //An empty format will hide the module.
+        "max-length": 50,
+        "on-click": "nmsurf --launcher wofi"
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "on-click": "blueman-manager"
+    },
+    
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-source-muted": "{icon}",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "reverse-scrolling": true
+    },
+    
+    "custom/ScrollMPRIS": {
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/music.sh",
+        "escape": true,
+        "on-click": "playerctl play-pause"
+    },
+    
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "reverse-scrolling": true
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon} {profile}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "markup": true
+    },
+
+    "custom/power": {
+        "format" : "⏻",
+        "on-click": "wlogout"
+    },
+    
+    "tray": {
+        "icon-size": 18,
+        "spacing": 6,
+        "show-passive-items": true
+    }
+}

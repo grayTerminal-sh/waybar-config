@@ -1,0 +1,227 @@
+/* ---------- Base ---------- */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12pt;
+    border: none;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: rgba(200, 200, 200, 0.0);
+}
+
+.modules-left {
+    background: rgba(200, 200, 200, 0.1);
+    padding: 5px 10px 5px;
+    border-radius: 5px;
+}
+
+.modules-right {
+    background: rgba(200, 200, 200, 0.1);
+    padding: 5px 10px 5px;
+    border-radius: 5px;
+}
+
+.modules-center {
+    background: rgba(200, 200, 200, 0.1);
+    padding: 5px 10px 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* ---------- Workspaces ---------- */
+
+#workspaces {
+    /* pour bien centrer dans la barre */
+    padding: 0;
+}
+
+#workspaces button {
+    font-size: 2pt;
+    border-radius: 5px;
+    color: #bac2de;
+    background: rgba(93, 93, 93, 0.8);
+    padding: 0px 6px;
+    margin-top: 6px;      /* ↓ plus bas */
+    margin-bottom: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#workspaces button.active {
+    border-radius: 5px;
+    color: #1e1e2e;
+    font-weight: 600;
+    background: #cdd6f4;
+    padding: 0px 10px;    /* pastille plus grande */
+    margin-top: 2px;      /* ↑ remonte */
+    margin-bottom: 2px;
+}
+
+#workspaces button.active:hover {
+    border-radius: 5px;
+    color: #1e1e2e;
+    font-weight: 600;
+    background: #cdd6f4;
+    padding: 0px 10px;    /* pastille plus grande */
+    margin-top: 2px;      /* ↑ remonte */
+    margin-bottom: 2px;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+}
+
+#workspaces button:hover {
+    border-bottom: 1px solid #bb9af7;
+    background: rgba(49, 50, 68, 0.7);
+    padding: 0px 6px;
+    margin-bottom: 4px;
+}
+
+/* ---------- Modules de droite ---------- */
+
+#network,
+#bluetooth,
+#wireplumber,
+#backlight,
+#battery,
+#power-profiles-daemon,
+#clock,
+#tray,
+#custom-power {
+    padding: 0 10px;
+    margin-top: 6px;      /* ↓ plus bas */
+    margin-bottom: 6px;
+}
+
+/* Icônes réseau / BT / audio */
+#network {
+    color: #89dceb;
+}
+
+#bluetooth {
+    color: #74c7ec;
+}
+
+#wireplumber {
+    color: #a6e3a1;
+}
+
+/* Rétroéclairage / batterie / profils */
+#backlight {
+    color: #fab387;
+}
+
+#battery {
+    color: #f9e2af;
+}
+
+#power-profiles-daemon {
+    color: #f5c2e7;
+}
+
+/* Horloge */
+#clock {
+    color: #cdd6f4;
+}
+
+/* Bouton power */
+#custom-power {
+    color: #f38ba8;
+    padding-right: 12px;
+    padding-left: 8px;
+}
+
+#custom-hyprpicker {
+    background: rgba(93, 93, 93, 0.8);
+    border-radius: 5px;
+    color: #a6e3a1;
+    padding: 0 10px;
+    margin: 6px;
+}
+
+#custom-hyprpicker:hover {
+    background: rgba(93, 93, 93, 0.8);
+    border-bottom: 1px solid #bb9af7;
+    border-radius: 5px;
+    color: #a6e3a1;
+    padding: 0 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    margin-top: 6px;
+}
+
+/* Hover sur les modules de droite */
+#network:hover,
+#bluetooth:hover,
+#wireplumber:hover,
+#backlight:hover,
+#battery:hover,
+#power-profiles-daemon:hover,
+#custom-power:hover,
+#tray:hover,
+#custom-music:hover {
+    background: rgba(93, 93, 93, 0.8);
+    border-radius: 5px;
+    border-bottom: 1px solid #bb9af7;
+    margin-bottom: 4px;
+}
+
+/* ---------- États spéciaux ---------- */
+
+/* Batterie warning / critical */
+#battery.warning {
+    color: #f9e2af;
+    background: #45320a;
+}
+
+#battery.critical {
+    color: #f38ba8;
+    background: #3f151f;
+}
+
+/* Réseau déconnecté (format-disconnected non vide) */
+#network.disconnected {
+    color: #45475a;
+}
+
+/* Audio mute */
+#wireplumber.muted {
+    color: #45475a;
+}
+
+/* ---------- Music ---------- */
+
+#custom-ScrollMPRIS {
+    padding: 0 5px;
+    margin: 0 5px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#custom-ScrollMPRIS:hover {
+    border-bottom: 1px solid #bb9af7;
+    padding: 0 5px;
+    margin: 0 5px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+#custom-ScrollMPRIS.playing {
+    color: #a6e3a1;
+    border-radius: 5px;
+    background: rgba(93, 93, 93, 0.8);
+}
+
+#custom-ScrollMPRIS.paused {
+    color: #f9e2af;
+    border-radius: 5px;
+    background: rgba(93, 93, 93, 0.8);
+}
+
