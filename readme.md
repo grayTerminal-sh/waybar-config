@@ -4,7 +4,7 @@ Configuration Waybar pour Hyprland avec une barre supérieure “system” et un
 
 ## Screenshot
 
-![Screenshot](asset/screen.jpg)
+![Screenshot](assets/screen.jpg)
 
 ## Arborescence
 
