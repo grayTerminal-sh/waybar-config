@@ -2,6 +2,10 @@
 
 Configuration Waybar pour Hyprland avec une barre supérieure “system” et une barre inférieure type dock (auto-hide).
 
+## Screenshot
+
+![Screenshot](asset/screen.jpg)
+
 ## Arborescence
 
 ```bash
