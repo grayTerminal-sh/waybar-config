@@ -18,7 +18,7 @@ Configuration Waybar pour Hyprland avec une barre supérieure “system” et un
 ```
 
 ## Barre du bas : dock
-config-bottom.jsonc définit une Waybar en mode dock, centrée en bas, avec auto-hide. [file:52]
+config-bottom.jsonc définit une Waybar en mode dock, centrée en bas, avec auto-hide. 
 
 ### Principales options :
 
@@ -69,7 +69,7 @@ config-bottom.jsonc définit une Waybar en mode dock, centrée en bas, avec auto
 - battery : état batterie (icône + pourcentage).
 - power-profiles-daemon : profil d’alimentation courant.
 
-Extraits de config de modules : [file:52]
+Extraits de config de modules : 
 
 ```text
 "custom/launcher": {
@@ -97,7 +97,7 @@ Extraits de config de modules : [file:52]
 ```
 
 ## Style barre du haut
-style.css gère la barre principale (top), avec modules groupés gauche / centre / droite et un thème Catppuccin-like. [file:53]
+style.css gère la barre principale (top), avec modules groupés gauche / centre / droite et un thème Catppuccin-like. 
 
 ### Caractéristiques :
 
@@ -149,7 +149,7 @@ Couleurs spécifiques pour réseau, bluetooth, audio, backlight, batterie, PPD, 
 ```
 
 ### Style dock (barre du bas)
-style-bottom.css applique un look dock arrondi et des icônes qui grossissent au hover. [file:56]
+style-bottom.css applique un look dock arrondi et des icônes qui grossissent au hover. 
 
 Caractéristiques :
 
@@ -191,7 +191,7 @@ window#waybar {
 ```
 
 ## Dépendances
-Principaux paquets nécessaires : [file:52][file:53][file:56]
+Principaux paquets nécessaires : 
 - waybar
 - wofi (launcher)
 - thunar (fichiers, ou adapter la commande)
@@ -201,9 +201,13 @@ Principaux paquets nécessaires : [file:52][file:53][file:56]
 - perplexity (script ou binaire perso dans $PATH)
 - power-profiles-daemon
 - fonts : JetBrainsMono Nerd Font, et Nerd Fonts pour les icônes (, , etc.)
+- wlogout 
+- NetworkManagerGtk
+- Hyprpicker
+- Blueman-manager
 
 ## Intégration Hyprland
-La Waybar est lancée depuis la config Hyprland (exemple) : [file:42]
+La Waybar est lancée depuis la config Hyprland (exemple) :
 
 ```text
 exec-once = waybar -c ~/.config/waybar/config -s ~/.config/waybar/style.css
