@@ -1,7 +1,6 @@
 # Waybar config (top + dock)
 
-Configuration Waybar pour Hyprland avec une barre supérieure “system” et une barre inférieure type dock (auto-hide).
-
+Waybar configuration for Hyprland with a top “system” bar and a bottom dock‑like bar (auto‑hide).
 ## Screenshot
 
 ![Screenshot](assets/screen.jpg)
@@ -18,8 +17,7 @@ Configuration Waybar pour Hyprland avec une barre supérieure “system” et un
 ```
 
 ## Barre du bas : dock
-config-bottom.jsonc définit une Waybar en mode dock, centrée en bas, avec auto-hide. 
-
+config-bottom.jsonc defines a dock‑style Waybar, centered at the bottom, with keybind‑hide.
 ### Principales options :
 
 ```text
@@ -59,17 +57,17 @@ config-bottom.jsonc définit une Waybar en mode dock, centrée en bas, avec auto
 }
 ```
 
-### Modules principaux :
-- custom/launcher : menu d’applications (wofi).
-- custom/deezer : lance deezer-desktop.
-- custom/firefox : lance firefox.
-- custom/perplexity : lance perplexity (ton launcher perso).
-- custom/files : lance thunar.
-- custom/kitty : lance kitty.
-- battery : état batterie (icône + pourcentage).
-- power-profiles-daemon : profil d’alimentation courant.
+### Main modules :
+- custom/launcher: application menu (wofi).
+- custom/deezer: launches deezer-desktop.
+- custom/firefox: launches Firefox.
+- custom/perplexity: launches Perplexity (your custom launcher).
+- custom/files: launches Thunar.
+- custom/kitty: launches Kitty.
+- battery: battery status (icon + percentage).
+- power-profiles-daemon: current power profile.
 
-Extraits de config de modules : 
+### Module config snippets : 
 
 ```text
 "custom/launcher": {
@@ -96,17 +94,17 @@ Extraits de config de modules :
 }
 ```
 
-## Style barre du haut
-style.css gère la barre principale (top), avec modules groupés gauche / centre / droite et un thème Catppuccin-like. 
+## Top bar style :
+style.css handles the main (top) bar, with modules grouped on the left / center / right and a Catppuccin‑like theme.
 
-### Caractéristiques :
+### Features :
 
-Font : JetBrainsMono Nerd Font, 12pt.
-Groupes .modules-left, .modules-center, .modules-right avec fond semi-transparent et bordures arrondies
-Workspaces sous forme de pastilles compactes, avec état actif, hover et urgent.
-Couleurs spécifiques pour réseau, bluetooth, audio, backlight, batterie, PPD, horloge, power, musique.
+- Font : JetBrainsMono Nerd Font, 12pt.
+- .modules-left, .modules-center, .modules-right groups with semi‑transparent background and rounded borders.
+- Workspaces as compact pills with active, hover and urgent states.
+- Specific colors for network, bluetooth, audio, backlight, battery, PPD, clock, power, music.
 
-### Exemple pour les workspaces :
+### Workspaces examples:
 
 ```css
 #workspaces button {
@@ -148,16 +146,15 @@ Couleurs spécifiques pour réseau, bluetooth, audio, backlight, batterie, PPD, 
 }
 ```
 
-### Style dock (barre du bas)
-style-bottom.css applique un look dock arrondi et des icônes qui grossissent au hover. 
+### Dock style (bottom bar)
+- style-bottom.css applies a dock look with rounded corners and icons that grow on hover.
 
-Caractéristiques :
+### Features:
+- Rounded background (border-radius: 16px;) with a light translucent fill.
+- Center icons (deezer, firefox, perplexity, files, kitty) at 18px that scale up to 42px on hover.
+- Battery + power‑profiles aligned on the right, with underline‑style hover.​
 
-- Fond arrondi (border-radius: 16px;) et léger fond translucide.
-- Icônes centre (deezer, firefox, perplexity, files, kitty) à 18px qui passent à 42px au survol.
-- Batterie + power-profiles alignés à droite, avec hover souligné.
-
-### Extraits :
+### Snippets :
 
 ```css
 window#waybar {
@@ -190,26 +187,28 @@ window#waybar {
 }
 ```
 
-## Dépendances
-Principaux paquets nécessaires : 
+###Dependencies
+
+#### Main required packages:
 - waybar
 - wofi (launcher)
-- thunar (fichiers, ou adapter la commande)
+- thunar (file manager, or adjust the command)
 - kitty
 - firefox
 - deezer-desktop
-- perplexity (script ou binaire perso dans $PATH)
 - power-profiles-daemon
-- fonts : JetBrainsMono Nerd Font, et Nerd Fonts pour les icônes (, , etc.)
-- wlogout 
+- fonts: JetBrainsMono Nerd Font, and Nerd Fonts for icons (, , etc.)
+- wlogout
 - NetworkManagerGtk
 - Hyprpicker
 - Blueman-manager
 
-## Intégration Hyprland
-La Waybar est lancée depuis la config Hyprland (exemple) :
+### Hyprland integration
+Waybar is started from the Hyprland config (example):
 
 ```text
 exec-once = waybar -c ~/.config/waybar/config -s ~/.config/waybar/style.css
 exec-once = waybar -c ~/.config/waybar/config-bottom.jsonc -s ~/.config/waybar/style-bottom.css
 ```
+### Keybind 
+- <leader>space : bottom waybar
